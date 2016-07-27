@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Chalk Digital</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDWrfr3ngYidRjr7ALIcRdVTX42yM1h8Rs"></script>
+    <link rel="stylesheet", href="chalk2.css">
+    <link href="social-buttons.css" rel="stylesheet">
+
+    <script>
+
+        var x = document.getElementById("demo");
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            lat = position.coords.latitude;
+            lon = position.coords.longitude;
+            latlon = new google.maps.LatLng(lat, lon)
+            mapholder = document.getElementById('mapholder')
+            mapholder.style.height = '250px';
+            mapholder.style.width = '500px';
+
+            var myOptions = {
+                center:latlon,zoom:14,
+                mapTypeId:google.maps.MapTypeId.ROADMAP,
+                mapTypeControl:false,
+                navigationControlOptions:{style:google.maps.NavigationControlStyle.SMALL}
+            }
+
+            var map = new google.maps.Map(document.getElementById("mapholder"), myOptions);
+            var marker = new google.maps.Marker({position:latlon,map:map,title:"You are here!"});
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    x.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    x.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    x.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    x.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+    </script>
+
+</head>
+<body>
+
+
+<style>
+    @media only screen and (max-width: 992px) {
+        .b{
+            margin-top:-115px;
+        }
+    }
+
+    @media only screen and (max-width: 992px) {
+        .a{
+            background-color: white;
+            margin-top: 80px;
+            height: 603px;
+        }
+    }
+    @media only screen and (min-width: 992px) {
+        .a{
+            background-color: grey;
+
+            margin-top: 0px;
+        }
+    }
+
+    @media only screen and (min-width: 992px) {
+        .d{
+
+
+
+        }
+    }
+
+
+
+
+
+    @media (max-width: 768px) {
+        .nav-justified > li {
+            display: table-cell;
+            width: 1%;
+        }
+        .nav-justified > li > a  {
+            border-bottom: 1px solid #ddd !important;
+            border-radius: 4px 4px 0 0 !important;
+            margin-bottom: 0 !important;
+        }
+    }
+
+
+
+</style>
+
+
+    <div class="container-fluid" style="padding-left: 0px;padding-right: 0px;">
+        <div class="row" style="margin-left: 0px;margin-right: 0px;">
+            <div class="col-md-4 a" ><!--style="padding-left: 0px;padding-right: 0px;"-->
+                <br><br>
+                <div class="b" align="center"><img src="custom-bg.png" class="img-responsive" height="100%" width="100%">
+                </div>
+                <br>
+                <div style="text-align: center;color: blue"><p style="color:black;"><b>Chalk Digital</p><span class="glyphicon glyphicon-phone"></span>16464169dcd<br>
+                    <span class="glyphicon glyphicon-envelope">chalkdigital@gmail.com</span>
+                </div>
+
+                <br>
+                <!__________________________________________________________>
+                <div class="container-fluid d hidden-lg hidden-md" style="padding-left: 0px;padding-right: 0px;">
+                    <div class="container-fluid" style="border-style: solid;border-color: black;border-width: 0.1px;padding-left: 0px;padding-right: 0px;margin-bottom: 0.5;margin-bottom: 3px;">
+                        <ul class="nav nav-tabs nav-justified">
+                            <li class="active"><button class="btn btn-default" type="button" data-toggle="tab" href="#home" style="border-radius:0px;width: 100%;" aria-expanded="true"><span class="glyphicon glyphicon-picture"></span></button></li>
+                            <li class=""><button class="btn btn-default" type="button" data-toggle="tab" href="#menu1" style="border-radius:0px;width: 100%" aria-expanded="false"><span class="glyphicon glyphicon-map-marker"></span></button></li>
+                            <li class=""><button class="btn btn-default" type="button" data-toggle="tab" href="#menu2" style="border-radius:0px;width: 100%" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span></button></li>
+                            <li><button class="btn btn-default" type="button" data-toggle="tab" href="#menu3" style="border-radius:0px;width: 100%"><span class="glyphicon glyphicon-envelope"></span></button></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content container-fluid" style="border:solid;border-color: black;border-width:0.5px;padding-left:0px; padding-right:0px;">
+                        <div id="home" class="tab-pane fade active in" style="height: 100px;width: 100px;">
+
+
+                            <img src="yahoo-messenger-icon.png" class="img-responsive" height="100%" width="100%" style="text-align:center;display:block;margin-left: auto;margin-right: auto">
+
+
+
+
+                        </div>
+                        <div id="menu1" class="tab-pane fade" style="width:auto;height:200px;">
+
+
+
+
+
+                        </div>
+                        <div id="menu2" class="tab-pane fade">
+                            <h3>Menu 2</h3>
+                            <p>Some content in menu 2.</p>
+                        </div>
+
+                        <div id="menu3" class="tab-pane fade">
+                            <h3>Menu 3</h3>
+                            <p>Some content in menu 3.</p>
+                        </div>
+
+                    </div>
+                    <!______________________________________________________________>
+                </div>
+                <div class="container-fluid hidden-lg hidden-md" style="border: solid; border-color:black;border-width:0.5px;margin-top: 4px;">
+                    <div align="center" >
+                        <p style="margin-top: 13px">
+                            <a href="#" class="sb circle twitter">Twitter</a>
+                            <a href="#" class="sb circle facebook">Facebook</a>
+                            <a href="#" class="sb circle heart">Heart</a>
+                            <a href="#" class="sb circle linkedin">LinkedIn</a>
+                            <a href="#" class="sb circle pinterest">Pinterest</a>
+                            <a href="#" class="sb circle podcast">Podcast</a>
+                            <a href="#" class="sb circle rss">RSS</a>
+                            <a href="#" class="sb circle share_this">Share</a>
+                            <a href="#" class="sb circle star">Star</a>
+                            <a href="#" class="sb circle vimeo">Vimeo</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="container-fluid hidden-lg hidden-md" style="text-align:center;border: solid; border-color: black ; border-width: 0.5px;margin-top: 4px;">
+                    Powered by Chalk Digital<br>Piracy terms</div>
+
+
+                <!grey closes>
+
+            </div>
+
+    <div class="col-md-8 hidden-xs hidden-sm c" style="
+    padding-left: 0px;
+    padding-right: 0px;
+"></div>
+    </div>
+
+
+<!row closes>
+<!main container closes>
+
+<div class="container-fluid d hidden-xs hidden-sm" style="padding-left: 0px;padding-right: 0px;">
+    <div class="container-fluid" style="border-style: solid;border-color: black;border-width: 0.1px;padding-left: 0px;padding-right: 0px;">
+        <ul class="nav nav-tabs nav-justified">
+            <li class="active"><button class="btn btn-default" type="button" data-toggle="tab" href="#home2" style="border-radius:0px;width: 100%;" aria-expanded="true"><span class="glyphicon glyphicon-picture"></span></button></li>
+            <li class=""><button class="btn btn-default" type="button" data-toggle="tab" href="#menu12" style="border-radius:0px;width: 100%" aria-expanded="false"><span class="glyphicon glyphicon-map-marker"></span></button></li>
+            <li class=""><button class="btn btn-default" type="button" data-toggle="tab" href="#menu22" style="border-radius:0px;width: 100%" aria-expanded="false"><span class="glyphicon glyphicon-info-sign"></span></button></li>
+            <li><button class="btn btn-default" type="button" data-toggle="tab" href="#menu32" style="border-radius:0px;width: 100%"><span class="glyphicon glyphicon-envelope"></span></button></li>
+        </ul>
+    </div>
+    <div class="tab-content container-fluid" style="/*border:solid;border-color: black;border-width:0.5px;*/padding-left:0px; padding-right:0px;background-color: whitesmoke">
+        <div id="home2" class="tab-pane fade active in" style="height: 347px;width: 100px;">
+
+
+            <img src="yahoo-messenger-icon.png" class="img-responsive" height="100%" width="100%" style="text-align:center;display:block;margin-left: auto;margin-right: auto">
+
+
+
+
+        </div>
+        <div id="menu12" class="tab-pane fade" style="width:auto;height:347px;">
+
+
+
+
+
+        </div>
+        <div id="menu22" class="tab-pane fade" style="height:328px;">
+            <h3>Menu 2</h3>
+            <p>Some content in menu 2.</p>
+        </div>
+
+        <div id="menu32" class="tab-pane fade" style="height:328px;">
+            <h3>Menu 3</h3>
+            <p>Some content in menu 3.</p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+</body>
+</html>
