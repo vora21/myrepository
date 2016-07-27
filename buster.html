@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <script>
+
+  </script>
+ <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js">
+
+
+
+</script>
+</head>
+<body>
+<script>
+
+
+     var app = angular.module('myApp', []);
+     app.controller('myCtrl', function($scope) {
+         $scope.CACHEBUSTER1 = new Date();
+         $scope.i;
+         $scope.CACHEBUSTER = [7];
+         $scope.frames = [true, false, false, false, false];
+         $scope.currentView = 0;
+
+         $scope.Hide = function (k) {
+             if (k != $scope.currentView) {
+                 $scope.frames[$scope.currentView] = false;
+                 $scope.frames[$scope.currentView = k] = true;
+
+             }
+
+         }
+
+
+         for (i = 0; i < 7; i++) {
+
+             $scope.CACHEBUSTER[i] = $scope.CACHEBUSTER1.getTime() + Math.random();
+
+         }
+
+
+         var data0 = document.getElementById("iframe0");
+         var url0 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-0?mpt=' + $scope.CACHEBUSTER[0] + '&mpvc=&cterm='+$scope.CACHEBUSTER[0];
+         data0.src = url0;
+
+
+         var data1 = document.getElementById("iframe1");
+         var url1 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-1?mpt=' + $scope.CACHEBUSTER[1] + '&mpvc=&cterm='+$scope.CACHEBUSTER[1];
+         data1.src = url1;
+
+         var data2 = document.getElementById("iframe2");
+         var url2 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-2?mpt=' + $scope.CACHEBUSTER[2] + '&mpvc=&cterm='+$scope.CACHEBUSTER[2];
+         data2.src = url2;
+
+         var data3 = document.getElementById("iframe3");
+         var url3 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-3?mpt=' + $scope.CACHEBUSTER[3] + '&mpvc=&cterm='+$scope.CACHEBUSTER[3];
+         data3.src = url3;
+
+         var data4 = document.getElementById("iframe4");
+         var url4 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-4?mpt=' + $scope.CACHEBUSTER[4] + '&mpvc=&cterm='+$scope.CACHEBUSTER[4];
+         data4.src = url4;
+
+         var data5 = document.getElementById("iframe5");
+         var url5 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-5?mpt=' + $scope.CACHEBUSTER[5] + '&mpvc=&cterm='+$scope.CACHEBUSTER[5];
+         data5.src = url5;
+
+         var data6 = document.getElementById("iframe6");
+         var url6 = 'http://adfarm.mediaplex.com/ad/fm/18916-133472-61983-6?mpt=' + $scope.CACHEBUSTER[6] + '&mpvc=&cterm='+$scope.CACHEBUSTER[6];
+         data6.src = url6;
+
+     });
+         /*for (i = 0; i < 7; i++) {
+
+             $scope.CACHEBUSTER[i] = $scope.CACHEBUSTER1.getTime() + Math.random();
+
+         }
+
+
+         var sc11 = document.getElementById("sc1");
+         var link1 = ';
+         sc11.src = link1;
+
+         var sc12 = document.getElementById("sc2");
+         var link2 = 'http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-2?mpt=' + $scope.CACHEBUSTER[2] + '&mpvc=';
+         sc12.src = link2;
+
+         var sc13 = document.getElementById("sc3");
+         var link3 = 'http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-3?mpt=' + $scope.CACHEBUSTER[3] + '&mpvc=';
+         sc13.src = link3;
+
+         var sc14 = document.getElementById("sc4");
+         var link4 = 'http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-4?mpt=' + $scope.CACHEBUSTER[4] + '&mpvc=';
+         sc14.src = link4;
+
+         var sc15 = document.getElementById("sc5");
+         var link5 = 'http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-5?mpt=' + $scope.CACHEBUSTER[5] + '&mpvc=';
+         sc15.src = link5;
+
+         var sc16 = document.getElementById("sc6");
+         var link6 = 'http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-6?mpt=' + $scope.CACHEBUSTER[6] + '&mpvc=';
+         sc16.src = link6;
+
+
+
+         for(i=0;i<7;i++){
+
+             $scope.CACHEBUSTER[i] = $scope.CACHEBUSTER1.getTime() + Math.random();
+
+         }
+
+
+
+         var a10=document.getElementById("a0");
+         var linkk0='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-0?mpt='+CACHEBUSTER[0] +'';
+         a10.href=linkk0;
+
+         var a11=document.getElementById("a1");
+         var linkk1='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-1?mpt='+CACHEBUSTER[1] +'';
+         a11.href=linkk1;
+
+         var a12=document.getElementById("a2");
+         var linkk2='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-2?mpt='+CACHEBUSTER[2] +'';
+         a12.href=linkk2;
+
+         var a13=document.getElementById("a3");
+         var linkk3='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-3?mpt='+CACHEBUSTER[3] +'';
+         a13.href=linkk3;
+
+         var a14=document.getElementById("a4");
+         var linkk4='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-4?mpt='+CACHEBUSTER[4] +'';
+         a14.href=linkk4;
+
+         var a15=document.getElementById("a5");
+         var linkk5='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-5?mpt='+CACHEBUSTER[5] +'';
+         a15.href=linkk5;
+
+         var a16=document.getElementById("a6");
+         var linkk6='http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-6?mpt='+CACHEBUSTER[6] +'';
+         a16.href=linkk6;
+
+         for(i=0;i<7;i++){
+
+             $scope.CACHEBUSTER[i] = $scope.CACHEBUSTER1.getTime() + Math.random();
+
+         }
+
+         var im10=document.getElementById("im0");
+         var linkkk0='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-0?mpt='+CACHEBUSTER[0] +'';
+         im10.src=linkkk0;
+
+         var im11=document.getElementById("im1");
+         var linkkk1='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-1?mpt='+CACHEBUSTER[1] +'';
+         im11.src=linkkk1;
+
+         var im12=document.getElementById("im2");
+         var linkkk2='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-2?mpt='+CACHEBUSTER[2] +'';
+         im12.src=linkkk2;
+
+         var im13=document.getElementById("im3");
+         var linkkk3='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-3?mpt='+CACHEBUSTER[3] +'';
+         im13.src=linkkk3;
+
+         var im14=document.getElementById("im4");
+         var linkkk4='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-4?mpt='+CACHEBUSTER[4] +'';
+         im14.src=linkkk4;
+
+         var im15=document.getElementById("im5");
+         var linkkk5='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-5?mpt='+CACHEBUSTER[5] +'';
+         im15.src=linkkk5;
+
+         var im16=document.getElementById("im6");
+         var linkkk6='http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-6?mpt='+CACHEBUSTER[6] +'';
+         im16.src=linkkk6;
+
+
+*/
+
+
+
+
+
+</script>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+<div style="display: inline-block; vertical-align: top;width: 371px; " >
+    <h1 style="text-align: center;width: 350px;">Lending Tree Creatives</h1>
+    <ul style="padding-left: 0px;">
+        <li>    <a href ng-click="Hide(0)" style="text-decoration: none"> Chalk_Mortgage_Desktop_300x600_062416_6216416</a></li>
+        <br>
+        <li>
+            <a href ng-click="Hide(1)"style="text-decoration: none"> Chalk_Mortgage_Mobile_300x250_062416_6216426 </a></li>
+        <br>
+        <li>
+            <a href ng-click="Hide(2)"style="text-decoration: none"> Chalk_Mortgage_Mobile_320x50_062416_6216436</a> </li>
+        <br>
+
+        <li>
+            <a href ng-click="Hide(3)"style="text-decoration: none"> Chalk_Mortgage_Mobile_300x50_062416_6216446</a></li>
+        <br>
+
+        <li>
+            <a href ng-click="Hide(4)"style="text-decoration: none"> Chalk_Mortgage_Desktop_728x90_062416_6216456</a></li>
+        <br>
+
+        <li>
+            <a href ng-click="Hide(5)"style="text-decoration: none">Chalk_Mortgage_Desktop_160x600_062416_6216466</a> </li>
+        <br>
+
+        <li>
+            <a href ng-click="Hide(6)"style="text-decoration: none"> Chalk_Mortgage_Desktop_300x250_062416_6216476</a></li>
+        <br>
+
+
+    </ul>
+</div>
+
+<div style="display:inline-block">
+
+
+    <iframe ng-show="frames[0]" id="iframe0" style="margin-left: 100px" src="" width=300 height=600 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+        <script id="sc0" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-0?mpt='+CACHEBUSTER+'&mpvc=">
+
+        </script>
+
+        <noscript>
+            <a id="a0"  target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-0?mpt='+CACHEBUSTER+'">
+                <img id="im0" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-0?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+    <iframe ng-show="frames[1]"  id="iframe1" style="margin-left: 100px;margin-top: 200px" src="" width=300 height=250 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+
+        <script id="sc1" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-1?mpt='+CACHEBUSTER+'&mpvc=">
+
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-1?mpt='+CACHEBUSTER+'">
+                <img id="im1" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-1?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+
+    </iframe>
+
+    <iframe ng-show="frames[2]"  id="iframe2" style="margin-left: 100px;margin-top: 200px" src="" width=320 height=50 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+
+        <script id="sc2" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-2?mpt='+CACHEBUSTER+'&mpvc=">
+
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-2?mpt='+CACHEBUSTER+'">
+                <img id="im2" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-2?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+
+    <iframe ng-show="frames[3]"  id="iframe3" style="margin-left: 100px;margin-top: 200px" src="" width=300 height=50 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+        <script id="sc3" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-3?mpt='+CACHEBUSTER+'&mpvc=">
+
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-3?mpt='+CACHEBUSTER+'">
+                <img id="im3" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-3?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+
+    <iframe ng-show="frames[4]"  id="iframe4" style="margin-top: 200px" src="" width=728 height=90 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+        <script id="sc4" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-4?mpt='+CACHEBUSTER+'&mpvc=">
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-4?mpt='+CACHEBUSTER+'">
+                <img id="im4" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-4?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+    <iframe ng-show="frames[5]"  id="iframe5" style="margin-left: 100px" src="" width=160 height=600 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+        <script id="sc5" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-5?mpt='+CACHEBUSTER+'&mpvc=">
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-5?mpt='+CACHEBUSTER+'">
+                <img id="im5" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-5?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+    <iframe ng-show="frames[6]"  id="iframe6" style="margin-left: 100px;margin-top: 200px" src="" width=300 height=250 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no bordercolor="#000000">
+        <script id="sc6" type="text/javascript" src="http://adfarm.mediaplex.com/ad/!js/18916-133472-61983-6?mpt='+CACHEBUSTER+'&mpvc=">
+        </script>
+        <noscript>
+            <a target="_blank" href="http://adfarm.mediaplex.com/ad/nc/18916-133472-61983-6?mpt='+CACHEBUSTER+'">
+                <img id="im6" src="http://adfarm.mediaplex.com/ad/nb/18916-133472-61983-6?mpt='+CACHEBUSTER+'"
+                     alt="LendingTree" border="0">
+            </a>
+        </noscript>
+    </iframe>
+
+</div>
+</div>
+</body>
+</html>
